@@ -33,7 +33,7 @@ prob_no_failure = binom.pmf(0, critical_operations, ups_failure_rate)
 print(f"Probability of No UPS Failures: {prob_no_failure * 100:.2f}%")
 
 # 2. Simulation Analysis: Assess Impact
-# Calculate percentage of outages affecting >5 critical operations
+# Calculate percentage of outages affecting >=1 critical operations
 threshold = 1
 prob_above_threshold = (results["UPS Failures"] >= threshold).mean()
 print(f"Probability of >={threshold} UPS Failures: {prob_above_threshold * 100:.2f}%")
